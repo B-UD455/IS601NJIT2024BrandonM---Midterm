@@ -1,0 +1,15 @@
+2024-10-26 00:06:58,556:ERROR:Error in command ['5']: local variable 'result' referenced before assignment
+2024-10-26 00:07:03,761:ERROR:Error in command ['5+5']: local variable 'result' referenced before assignment
+2024-10-26 00:08:02,053:ERROR:Error in command ['add']: list index out of range
+2024-10-26 00:08:22,874:ERROR:Error in command ['add']: list index out of range
+2024-10-26 00:08:32,881:ERROR:Error in command ['add']: list index out of range
+2024-10-26 00:08:57,256:ERROR:Error in command ['add(5,4)']: local variable 'result' referenced before assignment
+2024-10-26 00:12:27,818:ERROR:Error in command ['a']: name 'action' is not defined
+2024-10-26 00:13:28,542:ERROR:Error in command ['menu']: name 'action' is not defined
+2024-10-26 00:13:39,657:ERROR:Error in command ['menu']: name 'action' is not defined
+2024-10-26 00:14:00,872:ERROR:Error in command ['menu']: name 'action' is not defined
+2024-10-26 00:14:12,540:ERROR:Error in command ['menu']: name 'action' is not defined
+2024-10-26 00:14:57,214:ERROR:Error in command ['menu']: name 'action' is not defined
+2024-10-26 00:15:09,409:ERROR:Error in command ['menu']: name 'action' is not defined
+2024-10-26 00:15:17,856:ERROR:Error in command ['menu']: name 'action' is not defined
+2024-10-26 00:15:28,161:ERROR:Error in command ['menu']: name 'action' is not defined

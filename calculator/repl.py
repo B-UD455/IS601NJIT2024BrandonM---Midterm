@@ -4,12 +4,6 @@ from calculator.core import Calculator
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
-LOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO')
-LOG_FILE = os.getenv('LOG_FILE', 'calculator.log')
-
-logging.basicConfig(filename=LOG_FILE, level=LOG_LEVEL,
-                    format='%(asctime)s:%(levelname)s:%(message)s')
 
 
 class REPL:
@@ -28,10 +22,22 @@ class REPL:
 
     def _handle_command(self, command):
         try:
-            action, *args = command
-            if action == 'add':
-                result = self.calculator.add(float(args[0]), float(args[1]))
-                print(f"Result: {result}")
+            a = float(input("Enter first number: "))
+            b = float(input("Enter second number: "))
+            operation = input("Enter operation (add, subtract, multiply, divide): ").strip()
+
+            if operation == 'add':
+                print(f"The result of {a} add {b} is equal to {a + b}")
+            elif operation == 'subtract':
+                print(f"The result of {a} subtract {b} is equal to {a - b}")
+            elif operation == 'multiply':
+                print(f"The result of {a} multiply {b} is equal to {a * b}")
+            elif operation == 'divide':
+                if b == 0:
+                    raise ValueError("Cannot divide by zero")
+                print(f"The result of {a} divide {b} is equal to {a / b}")
+            else:
+                print(f"Unknown operation: {operation}")
             # Handle other actions similarly...
             self.logger.info(f"Executed {action} with result: {result}")
         except Exception as e:
@@ -43,3 +49,9 @@ class REPL:
         plugin = BasicOperationsPlugin()
         self.commands.update(plugin.get_commands())
             
+    load_dotenv()
+    LOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO')
+    LOG_FILE = os.getenv('LOG_FILE', 'calculator.log')
+    
+    logging.basicConfig(filename=LOG_FILE, level=LOG_LEVEL,
+                        format='%(asctime)s:%(levelname)s:%(message)s')
