@@ -80,7 +80,7 @@ The project demonstrates both the "Look Before You Leap" (LBYL) and "Easier to A
         print("Configuration file not found.")
     ```
 ## Video Demonstration
-A video demonstration showcasing the key features of the calculator is available [here](link_to_your_video).
+A video demonstration showcasing the key features of the calculator is available https://youtu.be/qltEplzWVNo
 
 ## Setup Instructions
 To set up this project on your local machine, follow these steps:
